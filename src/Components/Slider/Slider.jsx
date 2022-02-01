@@ -3,23 +3,11 @@ import { Carousel } from '@trendyol-js/react-carousel';
 import axios from "axios";
 import Slide from "./Slide";
 import s from './Slider.module.scss';
+import useGetFilms from "../../APPServices/useGetFilms";
 
 
 function Slider() {
-    const [posts, setPosts] = useState([])
-
-    useEffect(() => {
-        fetchFilm()
-    }, []);
-
-    axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
-    const API_KEY = '0c6e06ac468d17f199af4a1b4426b740';
-
-    async function fetchFilm() {
-      await axios.get(`trending/movie/week?api_key=${API_KEY}`)
-            .then(res => setPosts(res.data.results))
-    }
-
+    const posts = useGetFilms()
     return (
         <div className={s.sliderContainer}>
             <div className= {s.leftTitle}><p>Trending today</p></div>

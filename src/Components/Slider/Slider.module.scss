@@ -91,7 +91,8 @@
 .slide:hover .descr{
     display:block;
     position:absolute;
-    
+    top: 0px;
+    height: 100%;
     z-index:9999;
     width:100%;
     background: rgba(234, 71, 55, 0.7);
