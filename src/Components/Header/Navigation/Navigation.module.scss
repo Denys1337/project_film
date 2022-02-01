@@ -1,0 +1,31 @@
+.headerNav{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-inline-start: 0px;
+    li{
+        list-style: none;
+        padding-top: 32px;
+        padding-bottom: 29px;
+        padding-left: 31px; 
+        padding-right: 31px;
+        display: flex;
+        align-items: center;
+        
+    }
+    li:hover{
+        background: #EA4737;
+        
+        a{color: #fff;}
+        
+    }
+    a{
+        text-align: center;
+        text-decoration: none;
+        color:#000;
+    }
+   
+}
+
+
