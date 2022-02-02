@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Carousel } from '@trendyol-js/react-carousel';
-import axios from "axios";
 import Slide from "./Slide";
 import s from './Slider.module.scss';
 import useGetFilms from "../../APPServices/useGetFilms";

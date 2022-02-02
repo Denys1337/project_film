@@ -1,7 +1,9 @@
 .container{text-align:center;width: 300px;} 
 .searchForm {
 	margin-right: 40px;
-    margin-top: 37px
+    margin-top: 37px;
+	
+	
 }
 
  .searchField {
@@ -19,17 +21,19 @@
 	-webkit-transition: width 400ms ease, background 400ms ease;
 	transition:         width 400ms ease, background 400ms ease;
 	width:0px;
-   cursor: pointer;
 }
 
-.searchField:focus {
+.searchField:hover {
 	background-color: #fff;
 	border: 2px solid #c3c0ab;
 	cursor: text;
 	outline: 0;
 	width: 250px;
   color:#000;
+ 
+  
 }
+
 .searchForm
 .searchSubmit { 
 display:none;

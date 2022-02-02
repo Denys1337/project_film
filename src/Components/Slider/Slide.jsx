@@ -9,9 +9,9 @@ const Slide = ({ post }) => {
   const { id, poster_path } = post;
 
   return <div className={s.slide}>
-             <img src={BASE_URL + poster_path} onClick={() => router(`/filmitem/${id}`)} />
+             <img src={BASE_URL + poster_path}  />
              <div className={s.descr}>
-                 <div className={s.info}><p>Information</p></div>
+                 <div className={s.info} onClick={() => router(`/filmitem/${id}`)}><p>Information</p></div>
                  <div className={s.watch}><p>Add to watch list</p></div>
               </div>
         </div>

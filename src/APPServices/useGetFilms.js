@@ -17,7 +17,7 @@ const useGetFilms = () => {
             .then(res => setPosts(res.data.results))
     }
     
-    
+  
     return posts
 };
 
