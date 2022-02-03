@@ -22,3 +22,4 @@ const useGetFilms = () => {
 };
 
 export default useGetFilms;
+

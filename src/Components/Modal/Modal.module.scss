@@ -1,11 +1,39 @@
 .modalContent{
-    width: 300px;
-    background: #fff;
+    width: auto;
     position: absolute;
     right: 100px;
     top: 45px;
+    margin: 0 auto;
     input{
-        width: 100%;
+        width: 300px;
         padding: 5px;
+        margin-bottom: 10px;
+        position: absolute;
+        right: 0px;
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-inline-start: 0px;
+        background: #fff;
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 37px auto;
+    }
+    li{
+        display: flex;
+        list-style: none;
+        width: 100%;
+        padding-left: 20px;
+    }
+    li:hover{
+        background: #2998E2;
+        cursor: pointer;
+    }
+    img{
+        width: 50px;
+        object-fit: contain;
+        margin-right: 15px;
     }
 }
