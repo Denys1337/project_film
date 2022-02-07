@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Carousel } from '@trendyol-js/react-carousel';
-import Slide from "./Slide";
-import s from './Slider.module.scss';
-import useGetFilms from "../../APPServices/useGetFilms";
+import SlideHero from "./SlideHero";
+import s from './SliderHero.module.scss';
 
 
-function Slider() {
-    const posts = useGetFilms()
+
+function SliderHero({posts}) {
+    
+    
     return (
         <div className={s.sliderContainer}>
             <div className= {s.leftTitle}><p>Trending today</p></div>
@@ -14,7 +15,7 @@ function Slider() {
                 {posts.length > 0
                     ?
                     <Carousel show={4.9} slide={2} transition={0.5} >
-                        {posts.map((post, i) => <Slide post={post} key={i} />)}
+                        {posts.map((post, i) => <SlideHero post={post} key={i} />)}
                     </Carousel>
                     :
                     <h1>Not Found Films</h1>
@@ -24,4 +25,4 @@ function Slider() {
     )
 }
 
-export default Slider
+export default SliderHero

@@ -12,8 +12,6 @@ function ModalSearch({ open, handleClose }) {
   const BASE_URL = "https://image.tmdb.org/t/p/w500/";
   const router = useNavigate();
 
- 
-  console.log(posts);
   return (
     <Modal
       open={open}
@@ -22,7 +20,7 @@ function ModalSearch({ open, handleClose }) {
       aria-describedby="modal-modal-description"
     >
       <Box>
-        
+       
         <div className={s.modalContent}>
           <input type="search" placeholder='Search...' onChange={(e) => setValue(e.target.value)} />
           <ul>
@@ -30,7 +28,7 @@ function ModalSearch({ open, handleClose }) {
               return (
                   <li  key={id} onClick={()=> {
                     router(`/filmitem/${post.id}`)
-                    return handleClose()}} >
+                     handleClose()}} >
                     <img src={BASE_URL + post.poster_path}  />
                     <div>
                     <h3>{post.original_title} </h3>

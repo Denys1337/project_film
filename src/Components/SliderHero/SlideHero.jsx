@@ -1,13 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import s from './Slider.module.scss';
+import s from './SliderHero.module.scss';
 
 
-const Slide = ({ post }) => {
+const SlideHero = ({ post }) => {
   const BASE_URL = "https://image.tmdb.org/t/p/w500/"
   const router = useNavigate();
   const { id, poster_path } = post;
-  console.log(post);
+  
   return <div className={s.slide}>
              <img src={BASE_URL + poster_path}  />
              <div className={s.descr}>
@@ -17,4 +17,4 @@ const Slide = ({ post }) => {
         </div>
 };
 
-export default Slide;
+export default SlideHero;

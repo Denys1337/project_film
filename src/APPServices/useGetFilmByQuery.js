@@ -20,7 +20,7 @@ const useGetFilmByQuery = (query) => {
           );
            setPosts(response.data.results);
         } catch (err) {
-          console.log('🚀 ~ error', {error: err});
+          console.log('🚀 ~ error');
         }
       };
     

@@ -1,0 +1,134 @@
+.leftTitle{
+    width: 35px;
+    background: #2998E2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 20px;
+       margin: 0;
+        transform: rotate(-90deg);
+        color: #fff;
+        white-space:nowrap;
+        letter-spacing: 8.55px;
+    }
+    
+}
+.sliderContainer{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.slider{
+    width: 97.5%;
+    height: 100%;
+    
+    
+    img{
+        width: 288px;
+        height: 100%;
+        margin: 0;
+        margin-bottom: -4px;
+       
+    }
+    
+    [data-direction="right"]{
+        
+        height: 100%;
+        width: 36px;
+        background: rgba(0, 0, 0, 0.33);
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        right: 5px;
+        
+    }
+    [data-direction="right"]::before{
+        content: '>';
+        color: #fff;
+        font-size: 30px;
+        width: 10px;
+       
+    }
+    [data-direction="left"]{
+    height: 100%;
+    width: 36px;
+    background: rgba(0, 0, 0, 0.33);
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    
+    }
+    [data-direction="left"]::before{
+        content: '<';
+        color: #fff;
+        font-size: 30px;
+        width: 10px;
+       
+    }
+}
+
+.slide{
+    position:relative;
+    width: 288px;
+    
+}
+.descr{
+    display:none;
+}
+.slide:hover .descr{
+    
+    display:block;
+    position:absolute;
+    top: 0px;
+    height: 100%;
+    z-index:9999;
+    width:100%;
+    background: rgba(234, 71, 55, 0.7);
+}
+.info{
+    
+ color: #fff;
+ height: 50%;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ p{
+     margin: 0;
+     font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+ }
+}
+.info:hover{
+    background: rgba(255, 255, 255, 0.373302);
+}
+.watch:hover{
+    background: rgba(255, 255, 255, 0.373302);
+}
+
+.watch{
+    color: #fff;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        margin: 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 23px;
+        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+

@@ -18,7 +18,6 @@ function App() {
    <Header/>
   
       <Routes>
-        
         <Route path = "/filmitem/:id" element={<Filmitem/>}/>
         <Route path ='/boxoffice' element={<Boxoffice/>}/>
         <Route path ='/media' element={<Media/>}/>

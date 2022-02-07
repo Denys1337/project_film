@@ -6,8 +6,7 @@ import s from './Search.module.scss';
 
 function Search() {
   const [open, setOpen] = useState(false);
-  console.log(open);
-
+ 
   return (
 
     <div className={s.container}>

@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import useGetSingleFilm from "../../APPServices/useGetSingleFilm";
 
 function Filmitem(){
   const film = useGetSingleFilm()
   const {title,release_date,id} = film;
+  useEffect(() => {
+    console.log("item");
+  }, [])
     return (
         
             <div>
