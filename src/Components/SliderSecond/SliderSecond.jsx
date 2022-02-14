@@ -1,13 +1,12 @@
-import React,{useEffect} from "react";
+import React,{useEffect, useState} from "react";
 import { Carousel } from '@trendyol-js/react-carousel';
 import s from './SliderSecond.module.scss';
 import SlideSecond from "../SliderSecond/SlideSecond"
 
 
-
 function SliderSecond({posts}) {
     
-       
+
     return (
         <div className={s.sliderContainer}>
             <div className= {s.leftTitle}><p>TRAILERS</p></div>

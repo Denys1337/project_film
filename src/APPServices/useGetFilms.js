@@ -15,9 +15,10 @@ const useGetFilms = () => {
     async function fetchFilm() {
      axios.get(`trending/movie/week?api_key=${API_KEY}`).then((result) => {
          setPosts(result.data.results);
+         
      })
     }
-    
+       
   
     return posts
 };

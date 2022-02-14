@@ -4,9 +4,7 @@ import useGetSingleFilm from "../../APPServices/useGetSingleFilm";
 function Filmitem(){
   const film = useGetSingleFilm()
   const {title,release_date,id} = film;
-  useEffect(() => {
-    console.log("item");
-  }, [])
+  console.log(film);
     return (
         
             <div>
