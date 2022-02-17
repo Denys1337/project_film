@@ -1,0 +1,19 @@
+.news{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 16px ;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.149994);
+}
+
+.postersTitle{
+    width: calc((100% - 80px) / 3);
+    h2{
+        font-size: 24px;
+        color: rgba(0, 0, 0, 0.795488);
+        margin: 0;
+        padding: 0;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-bottom: 14px;
+    }
+}

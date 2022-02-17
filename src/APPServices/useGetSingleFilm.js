@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 
-const useGetSingleFilm = ( ) => {
+const useGetSingleFilm = () => {
     const params = useParams();
     axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
     const API_KEY = '0c6e06ac468d17f199af4a1b4426b740';

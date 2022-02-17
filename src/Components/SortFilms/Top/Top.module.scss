@@ -1,0 +1,42 @@
+.top{
+    width: calc((100% - 80px) / 3);
+    .title{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        h2{
+            font-size: 24px;
+            color: rgba(0, 0, 0, 0.795488);
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: #4A90E2;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            
+        }
+    }
+   
+}
+
+.topItem{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:2px;
+    padding-right: 10px;
+    &__leftCont{
+        display: flex;
+        img{
+            width: 42px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+    }
+   
+}
+.topItem:hover{
+    background: #EA4737;
+}

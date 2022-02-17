@@ -25,18 +25,20 @@
     position: relative;
     margin-top: 4px;
     background:  #07131B;
+    height: auto;
     
 }
 .slider{
     width: 97.5%;
-    height: 100%;
+    
     position: relative;
+    height: auto;
     
     img{
-        width: 164px;
+        width: 200px;
         object-fit: contain;
         margin: 0;
-        margin-bottom: -4px;
+        margin-bottom: 45px;
         margin-right: 17px; 
        
     }
@@ -98,5 +100,14 @@
             padding-bottom: 15px;
             color: #70B0FF;
         }
+    }
+    &__meanList{
+        li{
+            list-style: none;
+            padding-bottom: 15px;
+        }
+    }
+    iframe{
+        border: none;
     }
 }

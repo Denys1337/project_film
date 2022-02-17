@@ -1,0 +1,17 @@
+.posters{
+    position: relative;
+    img{
+        width: 100%;
+        height: 101px;
+        object-fit: cover ;
+        object-position: 0px -94px;
+        margin-bottom: 20px;
+    }
+    p{
+        position: absolute;
+        bottom: 10px;
+        z-index: 9999;
+        font-size: 18px;
+        color: #FFFFFF;
+    }
+}
