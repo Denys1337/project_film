@@ -1,0 +1,66 @@
+.oneFilm{
+  margin-right: 30px;
+  margin-bottom: 10px;
+    position: relative;
+       
+        img{
+            width: 300px;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+        p{
+            display: none;
+        }
+        
+    
+}
+.oneFilm:hover{
+    cursor: pointer;
+    p{
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        z-index: 9999;
+        bottom: 0;
+        padding: 10px 0px;
+        width: 100%;
+        background: #EA4737;
+        color: #fff;
+        font-size: 15px;
+        
+        span{
+            padding-right: 10px;
+        }
+    }
+}
+
+.topList{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.paginate{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap:0 20px;
+    cursor: pointer;
+  
+
+    &__page{
+        padding:1px 7px;
+    }
+    &__page:hover{
+        background: #EA4737;
+        color: #fff;
+    }
+    &__next:hover{
+        color: #EA4737;
+    }
+    &__active{
+        background: #EA4737;
+    }
+
+}

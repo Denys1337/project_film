@@ -1,5 +1,6 @@
 .top{
     width: calc((100% - 80px) / 3);
+    
     .title{
         display: flex;
         justify-content: space-between;
@@ -27,6 +28,9 @@
     justify-content: space-between;
     margin-bottom:2px;
     padding-right: 10px;
+    list-style:decimal;
+    cursor: pointer;
+        
     &__leftCont{
         display: flex;
         img{
