@@ -6,7 +6,7 @@ import Search from "./Search/Search";
 
 function Header(){
   
-   
+  
     return (
         
        <header>

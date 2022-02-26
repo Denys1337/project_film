@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from "react";
+import React from "react";
 import { Carousel } from '@trendyol-js/react-carousel';
 import s from './SliderSecond.module.scss';
 import SlideSecond from "../SliderSecond/SlideSecond"
@@ -13,7 +13,12 @@ function SliderSecond({posts}) {
             <div className={s.slider}>
             {posts.length > 0
                     ?
-                    <Carousel show={1} slide={1} transition={0.5} >
+                    <Carousel
+                        show={1} 
+                        slide={1} 
+                        transition={0.5}  
+                        swiping={true}
+                        responsive={true} >
                         {posts.map((post, i) => <SlideSecond post={post} key={i} />)}
                     </Carousel>
                     :

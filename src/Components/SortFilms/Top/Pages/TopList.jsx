@@ -1,5 +1,4 @@
 import React from 'react';
-import useGetTopFilm from '../../../../APPServices/useGetTopFilm';
 import TopPage from './TopPage';
 import ReactPaginate from 'react-paginate'
 import axios from 'axios';
@@ -12,7 +11,6 @@ const TopList = () => {
 
   const handlePageClick = async (data) => {
     const currentPage = data.selected + 1
-    console.log(currentPage);
     const API_KEY = '0c6e06ac468d17f199af4a1b4426b740';
    
     axios.get(`/movie/top_rated?api_key=${API_KEY}&page=${currentPage}`).then((result) => {

@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import { Carousel } from '@trendyol-js/react-carousel';
+import React from "react";
+import { Carousel} from '@trendyol-js/react-carousel';
 import SlideHero from "./SlideHero";
 import s from './SliderHero.module.scss';
 
 
 
 function SliderHero({posts}) {
-    
+  
     
     return (
         <div className={s.sliderContainer}>
@@ -14,7 +14,12 @@ function SliderHero({posts}) {
             <div className={s.slider}>
                 {posts.length > 0
                     ?
-                    <Carousel show={4.9} slide={2} transition={0.5} >
+                    <Carousel
+                        show={4.9}
+                        slide={2} 
+                        transition={0.5} 
+                        swiping={true}
+                        responsive={true}>
                         {posts.map((post, i) => <SlideHero post={post} key={i} />)}
                     </Carousel>
                     :

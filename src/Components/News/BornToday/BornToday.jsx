@@ -1,12 +1,8 @@
 import React from 'react';
-import { GetPersonBirthday } from '../../../Helpers/GetPersonBirthday';
 import s from './BornToday.module.scss'
 
 const BornToday = () => {
     const DATA = new Date().toLocaleDateString().split('/').slice(0,2).join('');
-
-    GetPersonBirthday()
-   
 
   return <div className={s.centerInfo}>
             <div className={s.bornSection}>

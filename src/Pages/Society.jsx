@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SliderHero from "../Components/SliderHero/SliderHero";
 import SliderSecond from "../Components/SliderSecond/SliderSecond";
-import useGetFilms from "../APPServices/useGetFilms";
 import News from "../Components/News/News";
 import SortFilms from "../Components/SortFilms/SortFilms";
+import { fetchFilm } from "../APPServices/Services";
 
 
 function Society(){
-    const posts = useGetFilms();
+    const [posts,setPosts] = useState('')
+    useEffect(() => {
+        async function fetchData() {
+          const res = await fetchFilm();
+          setPosts(res)
+        }
+        fetchData()
+      }, [])
+      
    
        return (
        
