@@ -5,9 +5,11 @@ import s from './Random.module.scss'
 
 const Random = () => {
   const BASE_URL = "https://image.tmdb.org/t/p/w500/";
-  const [random, setRandom] = useState(5)
+  const [random, setRandom] = useState(0)
+  
   const [films, setFilms] = useState()
-  const [film, setFilm] = useState()
+  const [film, setFilm] = useState(2)
+
   useEffect(() => {
     async function fetchData() {
       const res = await fetchFilm();
@@ -26,15 +28,38 @@ const Random = () => {
     async function fetchData() {
       const res = await fetchInfoFilm(arr[random]);
       setFilm(res)
+     
     }
     fetchData();
   }, [random]);
   const posterUrl = film?.poster_path;
+  const posterTiltle = film?.original_title;
+  let posterData = film?.release_date;
+
+  const posterGenres = film?.genres;
+
+  const newArr = [];
+  if (posterGenres) {
+    newArr.push(posterGenres.map(item => item.name))
+  }
+
+  const GENERES = newArr[0];
 
   return <div className={s.random}>
-    {posterUrl ? <img src={BASE_URL + posterUrl} /> : <h3>No Photo</h3>}
-
-    <button onClick={() => setRandom(Math.floor(Math.random() * arr.length))}>dacsc</button>
+    <div className={s.random__title}>
+       {posterUrl ? <img src={BASE_URL + posterUrl} /> : <h3>No Photo</h3>}
+       <p>{posterTiltle} ({posterData ? posterData.split('-').slice(0,1).join(''):<p>YEAR</p>})</p>
+    </div>
+    <ul>
+      {GENERES !== []
+      ?
+      GENERES?.map((number,i)=>
+      <li key={i}>{number}</li>)
+    :
+    <h4>No information</h4>}
+    </ul>
+   
+    <button onClick={() =>setRandom(Math.floor(Math.random() * arr.length))}>Randomize</button>
   </div>;
 };
 

@@ -7,8 +7,8 @@ import s from './News.module.scss'
 const News = ({posts}) => {
   
   return <div className={s.news}>
-      <LastNews/>
-      <BornToday/>
+      <LastNews posts = {posts}/>
+      <BornToday posts = {posts}/>
       {posts.length > 0
                     ?
                     <div className={s.postersTitle} >

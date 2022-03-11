@@ -1,4 +1,11 @@
 .box{
     width: calc((100% - 80px) / 3);
     background: blue;
+    h2{
+        font-size: 24px;
+        color: rgba(0, 0, 0, 0.795488);
+        margin: 0;
+        padding-bottom: 16px;
+    }
+    
 }

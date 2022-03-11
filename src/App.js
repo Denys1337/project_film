@@ -8,6 +8,7 @@ import Ratings from './Pages/Ratings';
 import Disk from './Pages/Disk';  
 import Society from './Pages/Society';
 import TopList from './Components/SortFilms/Top/Pages/TopList';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   
@@ -25,6 +26,7 @@ function App() {
         <Route path ='/disk' element={<Disk/>} />
         <Route path ='/toplist' element ={<TopList/>}/>
       </Routes>
+      <Footer/>
 </BrowserRouter>
   );
 }

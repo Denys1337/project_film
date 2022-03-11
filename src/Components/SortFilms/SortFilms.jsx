@@ -4,12 +4,12 @@ import Random from './Random/Random';
 import Top from './Top/Top';
 import s from './SortFilms.module.scss'
 
-const SortFilms = () => {
-
+const SortFilms = ({posts}) => {
+     
   return <div className={s.sort}>
       <Top/>
       <Random/>
-      <BoxOffice/>
+      <BoxOffice posts ={posts}/>
 
   </div>;
 };

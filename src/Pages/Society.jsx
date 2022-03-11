@@ -23,7 +23,7 @@ function Society(){
             <SliderHero posts={posts}/>
             <SliderSecond posts={posts}/>
             <News posts = {posts}/>
-            <SortFilms/>
+            <SortFilms posts ={posts}/>
             
         </div>
 

@@ -1,21 +1,18 @@
 import React from 'react';
 import s from './BornToday.module.scss'
 
-const BornToday = () => {
-    const DATA = new Date().toLocaleDateString().split('/').slice(0,2).join('');
+const BornToday = ({posts}) => {
+    const BASE_URL = "https://image.tmdb.org/t/p/w500/";
+    let arr =[]
+    if(posts){
+      const arr2 = posts.map((post)=>post.backdrop_path).slice(5,6)
+      arr.push(arr2)
+    }
+ 
+     const POSTER = arr.join('')
 
   return <div className={s.centerInfo}>
-            <div className={s.bornSection}>
-                <div className={s.titleBorn}>
-                    <h2>Born Today</h2>
-                    <a href='#'>See all birthdays</a>
-                </div>
-                <div className={s.topFilms}>
-                   
-                   
-                   <p>{DATA}</p>
-                </div>
-             </div>
+            <img src={BASE_URL + POSTER} alt={'poster'}/>
          </div>
 };
 

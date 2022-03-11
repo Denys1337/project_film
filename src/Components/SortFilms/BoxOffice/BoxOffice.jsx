@@ -1,10 +1,13 @@
-import React from 'react';
 import s from './BoxOffice.module.scss'
 
-function BoxOffice() {
+function BoxOffice({posts}) {
+
 
   return <div className={s.box}>
-       cxxc
+       <h2>Box Office (weekend)</h2>
+       <div className={s.content}>
+        
+       </div>
   </div>;
 }
 

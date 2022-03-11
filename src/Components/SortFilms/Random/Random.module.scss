@@ -1,4 +1,60 @@
 .random{
     width: calc((100% - 80px) / 3);
-    background: red;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 12px;
+
+    ul{
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        list-style: none;
+        padding: 12px;
+
+        li{
+            color: #fff;
+           border: 1px solid;
+            padding: 5px 10px;
+            background: rgba(255, 255, 255, 0.185292);
+            border-radius: 2px;
+            font-weight: normal;
+            font-size: 13px;
+            text-align: center;
+          
+        }
+    }
+
+&__title{
+    p{
+        color: #fff;
+        position: absolute;
+        bottom: 27%;
+        left:5%;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 18px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+    img{
+        width: 100%;
+        object-fit: cover;
+        height: 300px;
+        
+    }
+    button{
+        border: none;
+        padding: 13px;
+        text-align: center;
+        margin: 0 12px;
+        background: rgba(255, 255, 255, 0.187302);
+        color: #fff;
+        font-style: italic;
+        font-weight: 100;
+        font-size: 22px;
+        
+    }
 }
