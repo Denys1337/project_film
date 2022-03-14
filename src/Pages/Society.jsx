@@ -30,4 +30,4 @@ function Society(){
     )
 }
 
-export default Society
+export default  React.memo(Society) 
