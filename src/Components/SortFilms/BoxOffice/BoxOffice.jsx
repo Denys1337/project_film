@@ -1,6 +1,6 @@
 import s from './BoxOffice.module.scss'
 
-function BoxOffice({posts}) {
+function BoxOffice() {
 
 
   return <div className={s.box}>

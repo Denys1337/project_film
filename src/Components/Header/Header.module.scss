@@ -3,9 +3,13 @@ header{
     width: 100%;
     background: #fff;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     position: fixed;
-    z-index: 9999;
+    z-index: 999;
     top: 0;
     
+}
+.leftHeader{
+    display: flex;
+   
 }

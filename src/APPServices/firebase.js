@@ -7,9 +7,9 @@ const firebaseConfig = {
   databaseURL: "https://filmoteka-48a51.firebaseapp.com",
   projectId: "filmoteka-48a51",
   storageBucket: "filmoteka-48a51.appspot.com",
-  messagingSenderId: "SENDER_ID",
-  appId: "APP_ID",
-  measurementId: "G-MEASUREMENT_ID",
+  messagingSenderId: "508169299284",
+  appId: "1:508169299284:web:5ecc94cf86e5f798f114c1",
+  measurementId: "G-2TNKWWLZ8Y",
 };
 
 // Initialize Firebase 

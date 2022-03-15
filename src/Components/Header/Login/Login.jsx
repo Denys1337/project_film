@@ -1,12 +1,12 @@
 
 import {signInWithGoogle} from '../../../APPServices/firebase'
-
+import s from './Login.module.scss'
 const Login = () => {
-
+    
    
   return (
-    <div>
-        <button onClick={signInWithGoogle}><i className="fab fa-google"></i>Sign in with google</button>
+    <div className={s.SingIn}>
+        <button onClick={signInWithGoogle}><i ></i>Sign in with google</button>
     </div>
   )
 }

@@ -1,11 +1,11 @@
 import React from "react";
-import './Header.modules.scss';
-import Login from "./Login/Login";
+import s from './Header.module.scss';
+import LoginUser from "./Login/LoginUser";
 import Logo from "./Logo/Logo";
 import Navigation from "./Navigation/Navigation";
 import Search from "./Search/Search";
 
-function Header(){
+function Header({user}){
   
   
     return (
@@ -13,8 +13,11 @@ function Header(){
        <header>
            <Logo/>
            <Navigation/>
-           <Search/>
-           <Login/>
+           <div className={s.leftHeader}>
+              <Search/>
+             <LoginUser user ={user}/>
+           </div>
+          
        </header>
             
     

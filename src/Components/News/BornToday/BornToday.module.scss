@@ -1,9 +1,15 @@
 .centerInfo{
     width: calc((100% - 80px) / 3);
+    padding-top: 30px;
     img{
         max-width: 100%;
-      
+      cursor: pointer;
         object-fit: cover;
+    }
+    h2{
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
     }
 }
 

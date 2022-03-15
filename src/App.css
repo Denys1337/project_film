@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+.home{
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+ align-items: center;
+ padding: 100px 0;
+}
+.signout{
+  border: none;
+  padding: 15px;
+  background: #EA4737;
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+}

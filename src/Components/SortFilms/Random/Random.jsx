@@ -38,17 +38,8 @@ const Random = () =>  {
 
   }
   const firstFilm = films[0]
-  console.log('filmsFirrst', firstFilm);
-  console.log('dsds',films);
   const [film, setFilm] = useState(firstFilm)
-  console.log('film',film)
   
-
-  // let arr = []
-  // if (films) {
-  //   arr = films.map(film => film.id)
-
-  // }
   useEffect(() => {
     async function fetchData() {
       const res = await fetchInfoFilm(arr[random]);

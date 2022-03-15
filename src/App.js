@@ -14,8 +14,8 @@ import firebase from 'firebase/compat/app';
 import React, { useEffect, useState } from 'react'
 import Home from './Components/Home';
 import Login from './Components/Header/Login/Login';
-import Society from './Pages/Society';
 import APProutes from './Components/APProutes/APProutes';
+
 
 
 function App() {
@@ -29,8 +29,8 @@ function App() {
   console.log(user);
   return (
     <div>
-      <Login/>
-      {user ? <APProutes user ={user}/>:<h2>no</h2>}
+      
+      {user ? <APProutes user ={user}/>:<Login/>}
       
       
     </div>
