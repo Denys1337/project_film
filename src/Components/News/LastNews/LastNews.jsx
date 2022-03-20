@@ -1,13 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import s from './LastNews.module.scss'
+import {BASE_URL} from '../../../constant/constant'
 
 const LastNews = ({posts}) => {
-  const BASE_URL = "https://image.tmdb.org/t/p/w500/";
-   let arr =[]
+  
+   let onePoster =[]
    if(posts){
-     const arr2 = posts.map((post)=>post.backdrop_path).slice(10,11)
-     arr.push(arr2)
+     const POSTERS = posts.map((post)=>post.backdrop_path).slice(10,11)
+     onePoster.push(POSTERS)
    }
    let title;
    if(posts){
@@ -21,7 +22,7 @@ const LastNews = ({posts}) => {
   }
   const router = useNavigate();
   
-    const POSTER = arr.join('')
+    const POSTER = onePoster.join('')
  
   return <div className={s.repair}>
     <h2 onClick={() => router(`/filmitem/${id}`)}>{title}</h2>

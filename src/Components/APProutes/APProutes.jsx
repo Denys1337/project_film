@@ -1,4 +1,4 @@
-import react from "react";
+import React from 'react'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Boxoffice from "../../Pages/Boxoffice";
 import Disk from "../../Pages/Disk";
@@ -12,7 +12,7 @@ import Footer from "../Footer/Footer";
 import Home from "../Home";
 
 
-function APProutes({user}){
+function AppRoutes({user}){
    
     return (
         
@@ -36,4 +36,4 @@ function APProutes({user}){
     )
 }
 
-export default APProutes
+export default AppRoutes

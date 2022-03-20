@@ -12,7 +12,7 @@ const News = ({posts}) => {
       {posts.length > 0
                     ?
                     <div className={s.postersTitle} >
-                         <h2>Today's wallpapers</h2>
+                         <h2>Todays wallpapers</h2>
                         {posts.map((post, i) => <WallPapers post={post} key={i} />).slice(0,3)}
                     </div>
                     :

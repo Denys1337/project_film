@@ -1,27 +1,11 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import { fetchFilm, fetchInfoFilm } from '../../../APPServices/Services';
+import { fetchFilm, fetchInfoFilm } from '../../../AppServices/Services';
 import s from './Random.module.scss'
+import {BASE_URL} from '../../../constant/constant'
 
 const Random = () =>  {
  
-// import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
-
-// const firebaseConfig = {
-//   apiKey: "AIzaSyCP4IH33BQnLWLwwizcsQJyTqktcQ4keIk",
-//   authDomain: "filmoteka-48a51.firebaseapp.com",
-//   projectId: "filmoteka-48a51",
-//   storageBucket: "filmoteka-48a51.appspot.com",
-//   messagingSenderId: "508169299284",
-//   appId: "1:508169299284:web:5ecc94cf86e5f798f114c1",
-//   measurementId: "G-2TNKWWLZ8Y"
-// };
-
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
-  const BASE_URL = "https://image.tmdb.org/t/p/w500/";
   const [random, setRandom] = useState(1)
   const [films, setFilms] = useState([])
   useEffect(() => {

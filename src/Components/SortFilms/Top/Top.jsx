@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchTopFilm } from '../../../APPServices/Services';
+import { fetchTopFilm } from '../../../AppServices/Services';
 import s from './Top.module.scss'
 import TopItem from './TopItem';
 

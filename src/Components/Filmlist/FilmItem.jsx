@@ -2,12 +2,13 @@ import { Carousel } from "@trendyol-js/react-carousel";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { fetchCredits, fetchOneMoviesDetails } from "../../APPServices/Services";
+import { fetchCredits, fetchOneMoviesDetails } from "../../AppServices/Services";
 import s from './FilmItem.module.scss'
 import SlideCredits from "./SlideCredits";
+import {BASE_URL} from '../../constant/constant'
 
 function Filmitem() {
-  const BASE_URL = "https://image.tmdb.org/t/p/w500/"
+
   const params = useParams()
   const [single, setSingle] = useState()
   

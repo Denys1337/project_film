@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { fetchInfoFilm, fetchVideo } from '../../APPServices/Services';
+import { fetchInfoFilm, fetchVideo } from '../../AppServices/Services';
 import s from './SliderSecond.module.scss';
+import {BASE_URL} from '../../constant/constant'
 
+const SlideSecond = ({post}) => {
 
-
-const SlideSecond = ({ post }) => {
-  const BASE_URL = "https://image.tmdb.org/t/p/w500/";
   const { poster_path, original_title, overview, release_date, id } = post;
   const realese = release_date.split('-').slice(0, 1).join('');
   const [video, setVideo] = useState('');

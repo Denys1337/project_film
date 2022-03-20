@@ -5,7 +5,7 @@ import SlideSecond from "../SliderSecond/SlideSecond"
 
 
 function SliderSecond({posts}) {
- 
+
 
     return (
         <div className={s.sliderContainer}>

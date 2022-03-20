@@ -1,8 +1,9 @@
 import React from 'react'
 import s from './FilmItem.module.scss'
+import {BASE_URL} from '../../constant/constant'
 
 const SlideCredits = ({ credit }) => {
-    const BASE_URL = "https://image.tmdb.org/t/p/w500/"
+    
     const { profile_path, name } = credit;
     console.log('ren')
     return (

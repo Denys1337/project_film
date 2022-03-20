@@ -9,13 +9,14 @@ import Instagram from './images/Instagram.png'
 import Yputube from './images/Yputube.png'
 import Gplus from './images/Gplus.png'
 import Twitter from './images/Twitter.png'
-import { fetchTopFilm } from '../../APPServices/Services'
+import { fetchTopFilm } from '../../AppServices/Services'
 import LogoAmazon from './images/LogoAmazon.png'
+import {BASE_URL} from '../../constant/constant'
 
 
 const Fotter = () => {
 
-  const BASE_URL = "https://image.tmdb.org/t/p/w500/";
+ 
   const [tops, setTops] = useState('');
   useEffect(() => {
     async function fetchData() {

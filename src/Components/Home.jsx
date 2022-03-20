@@ -1,9 +1,9 @@
 import React from 'react';
-import { auth } from '../APPServices/firebase'
+import { auth } from '../AppServices/firebase'
 import '../App.css';
 
 
-const Home = ({ user }) => {
+const Home = ({user}) => {
    
   return (
     <div className="home">

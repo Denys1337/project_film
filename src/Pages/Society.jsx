@@ -3,7 +3,7 @@ import SliderHero from "../Components/SliderHero/SliderHero";
 import SliderSecond from "../Components/SliderSecond/SliderSecond";
 import News from "../Components/News/News";
 import SortFilms from "../Components/SortFilms/SortFilms";
-import { fetchFilm } from "../APPServices/Services";
+import { fetchFilm } from "../AppServices/Services";
 
 
 function Society(){

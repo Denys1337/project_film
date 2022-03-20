@@ -1,9 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import s from './BornToday.module.scss'
+import {BASE_URL} from '../../../constant/constant'
 
 const BornToday = ({posts}) => {
-    const BASE_URL = "https://image.tmdb.org/t/p/w500/";
+    
     let arr =[]
     if(posts){
       const arr2 = posts.map((post)=>post.backdrop_path).slice(5,6)

@@ -1,8 +1,9 @@
 import React from 'react';
 import s from './WallPapers.module.scss'
+import {BASE_URL} from '../../../constant/constant'
 
 const WallPapers = ({post}) => {
-  const BASE_URL = "https://image.tmdb.org/t/p/w500/";
+ 
  const {poster_path,original_title} = post
  
   return <div className={s.postersSection}>

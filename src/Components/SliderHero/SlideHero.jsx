@@ -1,10 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import s from './SliderHero.module.scss';
-
+import {BASE_URL} from '../../constant/constant'
 
 const SlideHero = ({ post }) => {
-  const BASE_URL = "https://image.tmdb.org/t/p/w500/"
+ 
   const router = useNavigate();
   const { id, poster_path } = post;
   

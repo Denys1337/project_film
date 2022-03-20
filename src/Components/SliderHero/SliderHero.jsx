@@ -4,7 +4,6 @@ import SlideHero from "./SlideHero";
 import s from './SliderHero.module.scss';
 
 
-
 function SliderHero({posts}) {
   
     
