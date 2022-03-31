@@ -10,7 +10,7 @@ function Boxoffice(){
             
     
        
-    )
+    );
 }
 
-export default Boxoffice
+export default Boxoffice;

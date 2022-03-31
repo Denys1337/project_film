@@ -3,16 +3,17 @@ import axios from "axios";
 
 const useGetFilmByQuery = (query) => {
 
-    const [posts, setPosts] = useState([])
+    const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetchSearchMovies(query)
+        fetchSearchMovies(query);
     },[query]);
 
-    axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
-    const API_KEY = '0c6e06ac468d17f199af4a1b4426b740';
+    axios.defaults.baseURL = "https://api.themoviedb.org/3/";
+    const API_KEY = "0c6e06ac468d17f199af4a1b4426b740";
 
      const fetchSearchMovies = async query => {
+      { if (!query) { return; }
         try {
           const response = await axios.get(
             `search/movie?query=${query}&api_key=${API_KEY}`,
@@ -20,12 +21,12 @@ const useGetFilmByQuery = (query) => {
           );
            setPosts(response.data.results);
         } catch (err) {
-          console.log('🚀 ~ error');
+          console.log("🚀 ~ error");
         }
-      };
-    
+      }
+     };
   
-    return posts
+    return posts;
 };
 
 export default useGetFilmByQuery;

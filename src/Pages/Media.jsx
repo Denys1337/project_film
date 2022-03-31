@@ -10,7 +10,7 @@ function Media(){
             
     
        
-    )
+    );
 }
 
-export default Media
+export default Media;

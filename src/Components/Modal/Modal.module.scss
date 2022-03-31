@@ -39,3 +39,16 @@
         margin-right: 15px;
     }
 }
+
+.Openbutton{
+    display: flex;
+    align-items:center;
+    margin-top: 40px;
+    border: 0;
+    background: none;
+    cursor: pointer;
+  img{
+      width: 30px;
+  }
+}
+

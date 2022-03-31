@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -41,13 +42,100 @@
   display: flex;
   justify-content: space-around;
  align-items: center;
- padding: 100px 0;
+ padding: 50px 0;
 }
-.signout{
+.singout{
   border: none;
-  padding: 15px;
+  padding: 15px ;
   background: #EA4737;
   color: #fff;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 100px 0;
 }
+.signin {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+background: linear-gradient(90deg, rgb(187, 41, 16) 0%, rgb(187, 50, 34) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(216, 64, 18, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  margin: 100px 0px;
+  }
+
+  .signin::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #d11f1f;
+  box-shadow: 0 0 60px rgba(202, 28, 28, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.signin:hover, .signout:focus {
+  color: #fff;
+  transform: translateY(-6px);
+}
+
+.signin:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+.signin::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #c91a1a;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.signin:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+.regUser{
+  display: flex;
+  justify-content: space-between;
+ align-items: center;
+ margin: 50px 0;
+ cursor: pointer;
+ gap: 0 60px;
+ 
+ }

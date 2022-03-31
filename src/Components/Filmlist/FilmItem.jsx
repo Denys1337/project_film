@@ -3,34 +3,34 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchCredits, fetchOneMoviesDetails } from "../../AppServices/Services";
-import s from './FilmItem.module.scss'
+import s from "./FilmItem.module.scss";
 import SlideCredits from "./SlideCredits";
-import {BASE_URL} from '../../constant/constant'
+import {BASE_URL} from "../../constant/constant";
 
 function Filmitem() {
 
-  const params = useParams()
-  const [single, setSingle] = useState()
+  const params = useParams();
+  const [single, setSingle] = useState();
   
   useEffect(() => {
     async function fetchData() {
       const res = await fetchOneMoviesDetails(params.id);
-      setSingle(res)
+      setSingle(res);
     }
-    fetchData()
-  }, [params.id])
+    fetchData();
+  }, [params.id]);
   const { runtime, title, status, overview, budget, release_date,  backdrop_path, vote_average, popularity } = single || {};
 
  
-  const [credits, setCredits] = useState()
+  const [credits, setCredits] = useState();
 
   useEffect(() => {
     async function fetchData() {
       const res = await fetchCredits(params.id);
-      setCredits(res)
+      setCredits(res);
     }
-    fetchData()
-  }, [params.id])
+    fetchData();
+  }, [params.id]);
 
   return (
 
@@ -41,7 +41,7 @@ function Filmitem() {
           <div>
             <h3>IMDB RATING</h3>
             <div className={s.FilmItem__rating}>
-              <img src='https://cdn-icons-png.flaticon.com/512/1828/1828884.png' />
+              <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt={"myProj"}/>
               <h4>{vote_average}</h4>
             </div>
           </div>
@@ -54,7 +54,7 @@ function Filmitem() {
       <div className={s.FilmItem__info}>
         {backdrop_path
           ?
-          <img src={BASE_URL + backdrop_path} />
+          <img src={BASE_URL + backdrop_path} alt={"myProj"}/>
           :
           <h2>No Photo</h2>
         }
@@ -87,7 +87,7 @@ function Filmitem() {
 
 
 
-  )
+  );
 }
 
-export default Filmitem
+export default Filmitem;

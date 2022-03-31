@@ -1,12 +1,12 @@
-import React from 'react';
-import Modal from '@mui/material/Modal';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import s from './Modal.module.scss'
-import { useState } from 'react';
+import React from "react";
+import Modal from "@mui/material/Modal";
+import Box from "@mui/material/Box";
+import s from "./Modal.module.scss";
+import { useState } from "react";
 import useGetFilmByQuery from "../../AppServices/useGetFilmByQuery";
-import { useNavigate } from 'react-router-dom';
-import {BASE_URL} from '../../constant/constant'
+import { useNavigate } from "react-router-dom";
+import {BASE_URL} from "../../constant/constant";
+import wing from "../../images/wing.png";
 
 
   
@@ -14,14 +14,14 @@ import {BASE_URL} from '../../constant/constant'
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
   const posts = useGetFilmByQuery(value);
   
   const router = useNavigate();
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
+      <button onClick={handleOpen} className={s.Openbutton}><img src={wing} alt="Search film"/></button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -35,11 +35,11 @@ import {BASE_URL} from '../../constant/constant'
             {posts.map((post, id) => {
               return (
                   <li  key={id} onClick={()=> {
-                    router(`/filmitem/${post.id}`)
-                     handleClose()}} >
+                    router(`/filmitem/${post.id}`);
+                     handleClose();}} >
                        {post.poster_path
                        ?
-                       <img src={BASE_URL + post.poster_path}  />
+                       <img src={BASE_URL + post.poster_path} alt={"myProj"}/>
                        :
                        <h3>IMAGE</h3>
                        
@@ -50,7 +50,7 @@ import {BASE_URL} from '../../constant/constant'
                     <p>{post.release_date}</p>
                     </div>
                   </li>
-                )
+                );
             }).slice(0, 4)}
           </ul>
         </div>

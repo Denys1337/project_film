@@ -1,5 +1,5 @@
 import React from "react";
-import s from './Header.module.scss';
+import s from "./Header.module.scss";
 import LoginUser from "./Login/LoginUser";
 import Logo from "./Logo/Logo";
 import Navigation from "./Navigation/Navigation";
@@ -22,7 +22,7 @@ function Header({user}){
             
     
        
-    )
+    );
 }
 
-export default Header
+export default Header;

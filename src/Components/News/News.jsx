@@ -1,8 +1,8 @@
-import React from 'react';
-import BornToday from './BornToday/BornToday';
-import LastNews from './LastNews/LastNews';
-import WallPapers from './WallPapers/WallPapers';
-import s from './News.module.scss'
+import React from "react";
+import BornToday from "./BornToday/BornToday";
+import LastNews from "./LastNews/LastNews";
+import WallPapers from "./WallPapers/WallPapers";
+import s from "./News.module.scss";
 
 const News = ({posts}) => {
   

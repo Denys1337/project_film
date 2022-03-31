@@ -1,6 +1,6 @@
-import React from 'react'
-import s from './Footer.module.scss'
-import { Link } from 'react-router-dom'
+import React from "react";
+import s from "./Footer.module.scss";
+import { Link } from "react-router-dom";
 
 const FooterLink = () => {
   
@@ -33,7 +33,7 @@ const FooterLink = () => {
       <li><Link to='#' className={s.footer__link}>Interest-Based Ads</Link></li>
     </ul>
   </div>
-  )
-}
+  );
+};
 
-export default FooterLink
+export default FooterLink;

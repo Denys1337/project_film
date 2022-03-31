@@ -1,18 +1,28 @@
-import React from 'react';
-import { auth } from '../AppServices/firebase'
-import '../App.css';
+import React from "react";
+import { auth } from "../AppServices/firebase";
+import "../App.css";
+import {signInWithGoogle} from "../AppServices/firebase";
 
 
 const Home = ({user}) => {
-   
+  console.log(user) ;
+
   return (
     <div className="home">
-         <img src={user.photoURL} alt="" />
-      <h1>Hello, <span></span>{user.displayName}</h1>
+    {user 
+      ?
+    <div className="regUser">
+         <img src={user.photoURL} alt={"myProj"} />
+      <h1>Hello, {user.displayName}</h1>
      
-      <button className="button signout" onClick={() => auth.signOut()}>Sign out</button>
+      <button className="button singout" onClick={() => auth.signOut()}>Sign out</button>
     </div>
-  )
+  
+  :
+  <button className="button signin" onClick={signInWithGoogle}><i ></i>Sign in with google</button>
 }
+</div>
+  );
+};
 
 export default Home;

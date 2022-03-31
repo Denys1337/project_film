@@ -1,8 +1,8 @@
-import React from 'react';
-import BoxOffice from './BoxOffice/BoxOffice';
-import Random from './Random/Random';
-import Top from './Top/Top';
-import s from './SortFilms.module.scss'
+import React from "react";
+import BoxOffice from "./BoxOffice/BoxOffice";
+import Random from "./Random/Random";
+import Top from "./Top/Top";
+import s from "./SortFilms.module.scss";
 
 const SortFilms = ({posts}) => {
      

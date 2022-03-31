@@ -5,8 +5,8 @@
     justify-content: space-between;
     padding: 0 16px;
     padding-top: 26px; 
+    flex: 0 0 auto;
     
-
     h3{
         color: rgba(0, 0, 0, 0.795488);
         font-size: 24px;
@@ -86,7 +86,8 @@
     padding: 0 16px;
     padding-top: 27px;
     padding-bottom: 14px;
-
+    position: relative;
+    
     &__company{
         display: flex;
         p{

@@ -1,5 +1,5 @@
 import React from "react";
-import './logo.module.scss';
+import "./logo.module.scss";
 
 function Logo(){
   
@@ -12,7 +12,7 @@ function Logo(){
             
     
        
-    )
+    );
 }
 
-export default Logo
+export default Logo;

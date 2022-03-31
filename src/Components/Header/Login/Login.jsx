@@ -1,14 +1,14 @@
-import React from 'react'
-import {signInWithGoogle} from '../../../AppServices/firebase'
-import s from './Login.module.scss'
+// import React from 'react'
+// import {signInWithGoogle} from '../../../AppServices/firebase'
+// import s from './Login.module.scss'
 
-const Login = () => {
+// const Login = () => {
     
-  return (
-    <div className={s.SingIn}>
-        <button onClick={signInWithGoogle}><i ></i>Sign in with google</button>
-    </div>
-  )
-}
+//   return (
+//     <div className={s.SingIn}>
+//         <button onClick={signInWithGoogle}><i ></i>Sign in with google</button>
+//     </div>
+//   )
+// }
 
-export default Login
+// export default Login

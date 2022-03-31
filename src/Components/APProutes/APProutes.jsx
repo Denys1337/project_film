@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Boxoffice from "../../Pages/Boxoffice";
 import Disk from "../../Pages/Disk";
@@ -23,7 +23,7 @@ function AppRoutes({user}){
              <Route path = "/filmitem/:id" element={<Filmitem/>}/>
              <Route path ='/boxoffice' element={<Boxoffice/>}/>
              <Route path ='/media' element={<Media/>}/>
-             <Route path ='/society' element={<Society/>} />
+             <Route path ='/society' element={<Society user={user}/>} />
              <Route path ='/ratings' element={<Ratings/>} />
              <Route path ='/disk' element={<Disk/>} />
              <Route path ='/toplist' element ={<TopList/>}/>
@@ -33,7 +33,7 @@ function AppRoutes({user}){
      </BrowserRouter>
     
        
-    )
+    );
 }
 
-export default AppRoutes
+export default AppRoutes;

@@ -1,8 +1,7 @@
-import './App.css';
-import firebase from 'firebase/compat/app';
-import React, { useEffect, useState } from 'react'
-import Login from './Components/Header/Login/Login';
-import AppRoutes from './Components/AppRoutes/AppRoutes';
+import s from "./App.css";
+import firebase from "firebase/compat/app";
+import React, { useEffect, useState } from "react";
+import AppRoutes from "./Components/AppRoutes/AppRoutes";
 
 
 
@@ -12,13 +11,14 @@ function App() {
   useEffect(() => {
     firebase.auth().onAuthStateChanged(user => {
       setUser(user);
-    })
-  }, [])
+    });
+  }, []);
+  
   console.log(user);
   return (
-    <div>
+    <div className={s.App}>
       
-      {user ? <AppRoutes user ={user}/>:<Login/>}
+      <AppRoutes user={user}/>
       
       
     </div>

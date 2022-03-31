@@ -1,7 +1,13 @@
 import React from "react";
-import { Carousel } from '@trendyol-js/react-carousel';
-import s from './SliderSecond.module.scss';
-import SlideSecond from "../SliderSecond/SlideSecond"
+import s from "./SliderSecond.module.scss";
+import SlideSecond from "../SliderSecond/SlideSecond";
+import { Swiper ,SwiperSlide} from "swiper/react";
+import "swiper/scss";
+import "swiper/scss/navigation";
+import "swiper/scss/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/bundle";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
 
 function SliderSecond({posts}) {
@@ -13,20 +19,26 @@ function SliderSecond({posts}) {
             <div className={s.slider}>
             {posts.length > 0
                     ?
-                    <Carousel
-                        show={1} 
-                        slide={1} 
-                        transition={0.5}  
-                        swiping={true}
-                        responsive={true} >
-                        {posts.map((post, i) => <SlideSecond post={post} key={i} />)}
-                    </Carousel>
+                    <Swiper
+                    modules={[Navigation, Pagination, Scrollbar, A11y]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    navigation
+                    pagination={{ clickable: true }}
+                    scrollbar={{ draggable: true }}
+                    onSwiper={(swiper) => console.log(swiper)}
+                    onSlideChange={() => console.log("slide change")}
+                    className="swiper-horizontal"
+                    
+                    >
+                        {posts.map((post, i) => <SwiperSlide key={i} ><SlideSecond post={post} key={i} /></SwiperSlide>)}
+                    </Swiper>
                     :
                     <h1>Not Found Films</h1>
                 }
             </div>
         </div>
-    )
+    );
 }
 
-export default SliderSecond
+export default SliderSecond;

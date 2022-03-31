@@ -1,10 +1,10 @@
 import React from "react";
-import { Carousel} from '@trendyol-js/react-carousel';
+import { Carousel} from "@trendyol-js/react-carousel";
 import SlideHero from "./SlideHero";
-import s from './SliderHero.module.scss';
+import s from "./SliderHero.module.scss";
 
 
-function SliderHero({posts}) {
+function SliderHero({posts,user}) {
   
     
     return (
@@ -19,14 +19,14 @@ function SliderHero({posts}) {
                         transition={0.5} 
                         swiping={true}
                         responsive={true}>
-                        {posts.map((post, i) => <SlideHero post={post} key={i} />)}
+                        {posts.map((post, i) => <SlideHero post={post} key={i} user={user}/>)}
                     </Carousel>
                     :
                     <h1>Not Found Films</h1>
                 }
             </div>
         </div>
-    )
+    );
 }
 
-export default SliderHero
+export default SliderHero;

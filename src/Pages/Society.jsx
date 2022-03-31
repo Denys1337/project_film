@@ -6,28 +6,28 @@ import SortFilms from "../Components/SortFilms/SortFilms";
 import { fetchFilm } from "../AppServices/Services";
 
 
-function Society(){
-    const [posts,setPosts] = useState('')
+function Society({user}){
+    const [posts,setPosts] = useState("");
     useEffect(() => {
         async function fetchData() {
           const res = await fetchFilm();
-          setPosts(res)
+          setPosts(res);
         }
-        fetchData()
-      }, [])
+        fetchData();
+      }, []);
       
    
        return (
        
         <div>
-            <SliderHero posts={posts}/>
+            <SliderHero posts={posts} user={user}/>
             <SliderSecond posts={posts}/>
             <News posts = {posts}/>
             <SortFilms posts ={posts}/>
             
         </div>
 
-    )
+    );
 }
 
-export default  React.memo(Society) 
+export default  React.memo(Society) ;

@@ -10,7 +10,7 @@ function Disk(){
             
     
        
-    )
+    );
 }
 
-export default Disk
+export default Disk;
