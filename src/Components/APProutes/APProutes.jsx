@@ -12,7 +12,7 @@ import Footer from "../Footer/Footer";
 import Home from "../Home";
 
 
-function AppRoutes({user}){
+const  AppRoutes = ({user}) => {
    
     return (
         
@@ -23,6 +23,7 @@ function AppRoutes({user}){
              <Route path = "/filmitem/:id" element={<Filmitem/>}/>
              <Route path ='/boxoffice' element={<Boxoffice/>}/>
              <Route path ='/media' element={<Media/>}/>
+             <Route path ='' element={<Society user={user}/>} />
              <Route path ='/society' element={<Society user={user}/>} />
              <Route path ='/ratings' element={<Ratings/>} />
              <Route path ='/disk' element={<Disk/>} />
@@ -34,6 +35,6 @@ function AppRoutes({user}){
     
        
     );
-}
+};
 
 export default AppRoutes;

@@ -5,9 +5,10 @@ import { Swiper ,SwiperSlide} from "swiper/react";
 import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
-import "swiper/css/scrollbar";
+import "swiper/scss/scrollbar";
 import "swiper/css/bundle";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import "swiper/scss/virtual";
+import { Navigation, Pagination, Scrollbar, A11y,Virtual } from "swiper";
 
 
 function SliderSecond({posts}) {
@@ -20,18 +21,22 @@ function SliderSecond({posts}) {
             {posts.length > 0
                     ?
                     <Swiper
-                    modules={[Navigation, Pagination, Scrollbar, A11y]}
+                    modules={[Navigation, Pagination, Scrollbar, A11y,Virtual]}
+                    virtual
                     spaceBetween={50}
                     slidesPerView={1}
                     navigation
-                    pagination={{ clickable: true }}
                     scrollbar={{ draggable: true }}
                     onSwiper={(swiper) => console.log(swiper)}
                     onSlideChange={() => console.log("slide change")}
-                    className="swiper-horizontal"
-                    
+                                   
                     >
-                        {posts.map((post, i) => <SwiperSlide key={i} ><SlideSecond post={post} key={i} /></SwiperSlide>)}
+                        {posts.map((post, i) => <SwiperSlide virtualIndex={i} key={i}> 
+                        {({ isActive }) => (
+                        <div><SlideSecond post={post} key={i} isActive={isActive} />,{isActive ? "active" : "not active"}
+                        </div>
+    )}
+                        </SwiperSlide>)}
                     </Swiper>
                     :
                     <h1>Not Found Films</h1>

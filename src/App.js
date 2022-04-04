@@ -3,9 +3,7 @@ import firebase from "firebase/compat/app";
 import React, { useEffect, useState } from "react";
 import AppRoutes from "./Components/AppRoutes/AppRoutes";
 
-
-
-function App() {
+const  App = () =>  {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -18,12 +16,12 @@ function App() {
   return (
     <div className={s.App}>
       
-      <AppRoutes user={user}/>
+      <AppRoutes {...user}/>
       
       
     </div>
    
   );
-}
+};
 
 export default React.memo(App);

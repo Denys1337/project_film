@@ -1,19 +1,19 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCP4IH33BQnLWLwwizcsQJyTqktcQ4keIk",
-  authDomain: "filmoteka-48a51.firebaseapp.com",
-  databaseURL: "https://filmoteka-48a51.firebaseapp.com",
-  projectId: "filmoteka-48a51",
-  storageBucket: "filmoteka-48a51.appspot.com",
-  messagingSenderId: "508169299284",
-  appId: "1:508169299284:web:5ecc94cf86e5f798f114c1",
-  measurementId: "G-2TNKWWLZ8Y",
+const CONFIG_FIREBASE = {
+    apiKey: process.env.REACT_APP_APIKEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    databaseURL: process.env.REACT_APP_DATA_BASE_URL,
+    projectId: process.env.REACT_APP_PROJECTID,
+    storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+    appId: process.env.REACT_APP_APPID,
+    measurementId: process.env.REACT_APP_MEASUREMENTID
 };
 
 // Initialize Firebase 
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(CONFIG_FIREBASE);
 
 export const auth = firebase.auth();
 

@@ -1,5 +1,5 @@
 import { Carousel } from "@trendyol-js/react-carousel";
-import React, { useEffect } from "react";
+import React, {useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchCredits, fetchOneMoviesDetails } from "../../AppServices/Services";
@@ -7,7 +7,8 @@ import s from "./FilmItem.module.scss";
 import SlideCredits from "./SlideCredits";
 import {BASE_URL} from "../../constant/constant";
 
-function Filmitem() {
+
+const  Filmitem = () => {
 
   const params = useParams();
   const [single, setSingle] = useState();
@@ -22,7 +23,7 @@ function Filmitem() {
   const { runtime, title, status, overview, budget, release_date,  backdrop_path, vote_average, popularity } = single || {};
 
  
-  const [credits, setCredits] = useState();
+  const [credits, setCredits] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -88,6 +89,6 @@ function Filmitem() {
 
 
   );
-}
+};
 
 export default Filmitem;

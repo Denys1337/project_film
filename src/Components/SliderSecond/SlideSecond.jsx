@@ -1,22 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { fetchInfoFilm} from "../../AppServices/Services";
+import { fetchInfoFilm, fetchVideo} from "../../AppServices/Services";
 import s from "./SliderSecond.module.scss";
 import {BASE_URL} from "../../constant/constant";
 
-const SlideSecond = ({post}) => {
+const SlideSecond = ({post,isActive}) => {
 
   const { poster_path, original_title, overview, release_date, id } = post;
   const realese = release_date.split("-").slice(0, 1).join("");
-  // const [video, setVideo] = useState("");
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     const res = await fetchVideo(id);  
-  //     setVideo(res);
-  //   }
-  //   fetchData();
-  // }, [id]);
-  // const oneVideo = video[1];
-
+  const [video, setVideo] = useState("");
+  useEffect(() => {
+    async function fetchData() {
+      const res = await fetchVideo(id);  
+      setVideo(res);
+    }
+    fetchData();
+  }, [id]);
+  const oneVideo = video[1];
   const [info, setInfo] = useState();
   useEffect(() => {
     async function fetchData() {
@@ -69,14 +68,14 @@ const SlideSecond = ({post}) => {
       <div>{overview}</div>
     </div>
 
-    {/* {oneVideo !== undefined
+    {oneVideo !== undefined && isActive === true
       ?
       <iframe width="835" src={`https://www.youtube.com/embed/${oneVideo.key}`} title="YouTube video player"  >
 
       </iframe>
       :
       <h1>Sorry, this video is not found</h1>
-    } */}
+    }
   </div>;
 };
 
