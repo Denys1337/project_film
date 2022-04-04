@@ -4,7 +4,7 @@ import s from "./Footer.module.scss";
 import appstore from "./images/Appstore.png";
 import google from "./images/google.png";
 import amazon from "./images/amazon.png";
-import { fetchTopFilm } from "../../AppServices/Services";
+import { fetchTopFilm } from "../../APPServices/Services";
 import {BASE_URL} from "../../constant/constant";
 import Copyright from "./Copyright";
 import FooterLink from "./FooterLink";

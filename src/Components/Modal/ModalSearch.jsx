@@ -3,7 +3,7 @@ import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import s from "./Modal.module.scss";
 import { useState } from "react";
-import useGetFilmByQuery from "../../AppServices/useGetFilmByQuery";
+import useGetFilmByQuery from "../../APPServices/useGetFilmByQuery";
 import { useNavigate } from "react-router-dom";
 import {BASE_URL} from "../../constant/constant";
 import wing from "../../images/wing.png";

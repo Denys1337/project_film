@@ -1,7 +1,7 @@
 import React from "react";
-import { auth } from "../AppServices/firebase";
+import { auth } from "../APPServices/firebase";
 import "../App.css";
-import {signInWithGoogle} from "../AppServices/firebase";
+import {signInWithGoogle} from "../APPServices/firebase";
 
 
 const Home = ({user}) => {

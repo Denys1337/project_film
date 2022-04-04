@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchInfoFilm, fetchVideo} from "../../AppServices/Services";
+import { fetchInfoFilm, fetchVideo} from "../../APPServices/Services";
 import s from "./SliderSecond.module.scss";
 import {BASE_URL} from "../../constant/constant";
 

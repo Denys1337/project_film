@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { fetchFilm, fetchInfoFilm } from "../../../AppServices/Services";
+import { fetchFilm, fetchInfoFilm } from "../../../APPServices/Services";
 import s from "./Random.module.scss";
 import {BASE_URL} from "../../../constant/constant";
 
