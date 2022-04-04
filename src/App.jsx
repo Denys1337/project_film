@@ -1,7 +1,8 @@
 import s from "./App.css";
 import firebase from "firebase/compat/app";
 import React, { useEffect, useState } from "react";
-import AppRoutes from "./Components/AppRoutes/AppRoutes";
+import AppRoutes from "./Components/approutes/AppRoutes";
+
 
 const  App = () =>  {
   const [user, setUser] = useState(null);
