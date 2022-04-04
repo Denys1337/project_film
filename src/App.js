@@ -16,7 +16,7 @@ const  App = () =>  {
   return (
     <div className={s.App}>
       
-      <AppRoutes {...user}/>
+      <AppRoutes user={user}/>
       
       
     </div>
