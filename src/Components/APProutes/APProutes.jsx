@@ -5,7 +5,7 @@ import Disk from "../../Pages/Disk";
 import Media from "../../Pages/Media";
 import Ratings from "../../Pages/Ratings";
 import Society from "../../Pages/Society";
-import Filmitem from "../Filmlist/Filmitem";
+import Filmitem from "../Filmlist/FilmItem";
 import Header from "../Header/Header";
 import TopList from "../SortFilms/Top/Pages/TopList";
 import Footer from "../Footer/Footer";
