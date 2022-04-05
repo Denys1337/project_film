@@ -14,7 +14,6 @@ const  App = () =>  {
     });
   }, []);
   
-  console.log(user);
   return (
     <div className={s.App}>
       

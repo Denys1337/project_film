@@ -13,27 +13,30 @@ const  Filmitem = () => {
   const params = useParams();
   const [single, setSingle] = useState();
   
+  async function fetchData() {
+    const res = await fetchOneMoviesDetails(params.id);
+    setSingle(res);
+  }
   useEffect(() => {
-    async function fetchData() {
-      const res = await fetchOneMoviesDetails(params.id);
-      setSingle(res);
-    }
-    fetchData();
+   
+    fetchData(params.id);
   }, [params.id]);
   const { runtime, title, status, overview, budget, release_date,  backdrop_path, vote_average, popularity } = single || {};
 
  
-  const [credits, setCredits] = useState([]);
+  const [credits, setCredits] = useState();
 
+  async function fetchDatacredits() {
+    const res = await fetchCredits(params.id);
+    setCredits(res);
+  }
   useEffect(() => {
-    async function fetchData() {
-      const res = await fetchCredits(params.id);
-      setCredits(res);
-    }
-    fetchData();
+  
+    fetchDatacredits(params.id);
   }, [params.id]);
-
-  return (
+  
+  console.log(credits);
+   return (
 
     <div className={s.FilmItem}>
       <div className={s.FilmItem__header}>
@@ -69,7 +72,7 @@ const  Filmitem = () => {
 
       </div>
       <p>Casts</p>
-      {credits
+      {credits 
         ?
         <Carousel
           show={8}
@@ -78,7 +81,7 @@ const  Filmitem = () => {
           swiping={true}
           responsive={true}
         >
-
+            
           {credits.map((credit, i) => <SlideCredits credit={credit} key={i} />)}
         </Carousel>
         : <h1>Hello</h1>

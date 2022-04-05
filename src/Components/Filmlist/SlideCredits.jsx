@@ -2,12 +2,13 @@ import React from "react";
 import s from "./FilmItem.module.scss";
 import {BASE_URL} from "../../constant/constant";
 
-const SlideCredits = ({ credit }) => {
+const SlideCredits = ({credit}) => {
     
     const { profile_path, name } = credit;
     
     return (
         <div className={s.SlideCredits}>
+            
             {profile_path
                 ?
                 <img src={BASE_URL + profile_path} alt={"myProj"}/>
